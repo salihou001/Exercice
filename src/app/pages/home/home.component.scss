@@ -1,0 +1,35 @@
+.button_oxygene_plant,
+p{
+    font-family: "Open Sans", sans-serif;
+}
+h1,
+h2{
+    font-family: "Poppins", sans-serif;
+    font-size: 3rem;
+}
+button.see_more{
+    font-family: "Poppins", sans-serif;
+    color:white;
+    cursor: pointer;
+}
+.plant{
+    background: #B9D6A8;
+}
+ul li{
+    position:relative;
+    overflow: hidden;
+}
+ul li::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    transform-origin: left;
+    background-color: #000;
+    transform: scaleX(0);
+    transition: transform .3s ease-out;
+}
+ul li:hover::before{
+    transform: scaleX(1);
+}

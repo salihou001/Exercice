@@ -1,0 +1,103 @@
+<div class="bg-gray-500 h-screen w-screen shadow-2xl">
+    <main class="container w-[80%] h-full">
+      <!-- file upload modal -->
+      <article aria-label="File Upload Modal" class="relative h-full flex flex-col bg-white shadow-xl rounded-md" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);" ondragleave="dragLeaveHandler(event);" ondragenter="dragEnterHandler(event);">
+
+        <!-- scroll area -->
+        <section class="h-full overflow-auto p-8 w-full h-full flex flex-col">
+          <header class="border-dashed border-2 border-gray-400 py-12 flex flex-col justify-center items-center">
+            <p class="font-semibold text-gray-900 flex flex-wrap justify-center">
+              <span>Drag and drop your</span>&nbsp;<span>files anywhere or</span>
+            </p>
+            <input id="hidden-input" type="file" multiple class="hidden" />
+            <button id="button" class="mt-2 rounded-sm px-3 py-1 bg-gray-200 hover:bg-gray-300 focus:shadow-outline focus:outline-none">
+              Upload a file
+            </button>
+          </header>
+<!-- 
+          <h1 class="pt-8 pb-3 font-semibold sm:text-lg text-gray-900">
+            To Upload
+          </h1> -->
+          <div class="bg-white shadow-xl rounded max-w-5xl mx-auto flex flex-col my-2 px-4 py-2">
+            <div class="-mx-3 md:flex mb-1">
+              <div class="md:w-1/2 px-3 md:mb-0">
+                <label class="block  tracking-wide text-grey-darker text-xs font-bold" for="grid-first-name">
+                  First Name
+                </label>
+                <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3" id="grid-first-name" type="text" placeholder="First Name">
+                <!-- <p class="text-red text-xs italic">Please fill out this field.</p> -->
+              </div>
+              <div class="md:w-1/2 px-3">
+                <label class="block  tracking-wide text-grey-darker text-xs font-bold" for="grid-last-name">
+                  Last Name
+                </label>
+                <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" id="grid-last-name" type="text" placeholder="Last Name">
+              </div>
+            </div>
+            <div class="-mx-3 md:flex mb-1">
+              <div class="md:w-full px-3">
+                <label class="block tracking-wide text-grey-darker text-xs font-bold" for="grid-password">
+                  Frequence/Day
+                </label>
+                <select class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3" name="" id="">
+                    <option value="1">1X</option>
+                    <option value="1">2X</option>
+                    <option value="1">3X</option>
+                    <option value="1">4X</option>
+                    <option value="1">5X</option>
+                </select>
+                <!-- <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3" id="grid-password" type="password" placeholder="******************"> -->
+                <!-- <p class="text-grey-dark text-xs italic">Make it as long and as crazy as you'd like</p> -->
+              </div>
+            </div>
+            <div class="-mx-3 md:flex mb-4">
+              <div class="md:w-1/2 px-3  md:mb-0">
+                <label class="block  tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-city">
+                  City
+                </label>
+                <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" id="grid-city" type="text" placeholder="Albuquerque">
+              </div>
+              <div class="md:w-1/2 px-3">
+                <label class="block  tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-state">
+                  State
+                </label>
+                <div class="relative">
+                  <select class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="grid-state">
+                    <option>New Mexico</option>
+                    <option>Missouri</option>
+                    <option>Texas</option>
+                  </select>
+                  <!-- <div class="pointer-events-none absolute pin-y pin-r flex items-center px-2 text-grey-darker">
+                    <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                  </div> -->
+                </div>
+              </div>
+              <div class="md:w-1/2 px-3">
+                <label class="block  tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-zip">
+                  Zip
+                </label>
+                <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" id="grid-zip" type="text" placeholder="90210">
+              </div>
+            </div>
+          </div>
+          <!-- <ul id="gallery" class="flex flex-1 flex-wrap -m-1">
+            <li id="empty" class="h-full w-full text-center flex flex-col items-center justify-center items-center">
+              <img class="mx-auto w-32" src="https://user-images.githubusercontent.com/507615/54591670-ac0a0180-4a65-11e9-846c-e55ffce0fe7b.png" alt="no data" />
+              <span class="text-small text-gray-500">No files selected</span>
+            </li>
+          </ul> -->
+        </section>
+
+        <!-- sticky footer
+        <footer class="flex justify-end px-8 pb-8 pt-4">
+          <button id="submit" class="rounded-sm px-3 py-1 bg-blue-700 hover:bg-blue-500 text-white focus:shadow-outline focus:outline-none">
+            Upload now
+          </button>
+          <button id="cancel" class="ml-3 rounded-sm px-3 py-1 hover:bg-gray-300 focus:shadow-outline focus:outline-none">
+            Cancel
+          </button>
+        </footer> -->
+      </article>
+      
+    </main>
+  </div>

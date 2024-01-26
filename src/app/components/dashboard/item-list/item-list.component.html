@@ -1,0 +1,36 @@
+
+<table class="w-full min-w-[640px] table-auto">
+  <thead class="w-full">
+    <tr class="w-full">
+      <th class="border-b border-blue-gray-50 py-3 px-6 text-left">
+        <p class="block antialiased font-sans text-[11px] font-medium uppercase text-blue-gray-400">Plants</p>
+      </th>
+      <th class="border-b border-blue-gray-50 py-3 px-6 text-left">
+        <p class="block antialiased font-sans text-[11px] font-medium uppercase text-blue-gray-400">Frequence</p>
+      </th>
+      <th class="border-b border-blue-gray-50 py-3 px-6 text-left">
+        <p class="block antialiased font-sans text-[11px] font-medium uppercase text-blue-gray-400">Evolution</p>
+      </th>
+    </tr>
+  </thead>
+  <tbody class="w-full" style="max-height: 400px !important;overflow-y: scroll !important;">
+    <tr *ngFor="let plant of listPlant">
+      <td class="py-3 px-5 border-b border-blue-gray-50">
+        <div class="flex items-center gap-4">
+        <p class="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-bold">{{ plant.name }}</p>
+        </div>
+      </td>
+      <td class="py-3 px-5 border-b border-blue-gray-50">
+        <p class="block antialiased font-sans text-xs font-medium text-blue-gray-600">{{ plant.timing }}</p>
+      </td>
+      <td class="py-3 px-5 border-b border-blue-gray-50">
+        <div class="w-10/12">
+        <p class="antialiased font-sans mb-1 block text-xs font-medium text-blue-gray-600">{{ plant.evolution }}%</p>
+        <div class="flex flex-start bg-blue-gray-50 overflow-hidden w-full rounded-sm font-sans text-xs font-medium h-1">
+          <div class="flex justify-center items-center h-full bg-orange from-blue-600 to-blue-400 text-white" [ngStyle]="{'width':plant ? plant.evolution + '%' : '50%'}"></div>
+        </div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
